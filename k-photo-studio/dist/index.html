@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K Photo Studio | Eternal Moments Captured</title>
+    <meta name="description" content="K Photo Studio offers premium, cinematic wedding photography, candid shoots, and portraits in Chennai. Book your luxury shoot today.">
+    
+    <!-- SEO & Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "PhotographyBusiness",
+      "name": "K Photo Studio",
+      "image": "https://images.unsplash.com/photo-1606800052052-a08af7148866?q=80&w=1000",
+      "telephone": "+91-0000000000",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Chennai",
+        "addressRegion": "Tamil Nadu",
+        "addressCountry": "IN"
+      }
+    }
+    </script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,800;1,600;1,800&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+
+    <!-- Spline 3D Viewer -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"></script>
+
+    <!-- GSAP / Lenis Smooth Scroll -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script type="module" crossorigin src="/assets/index-BeORzIXe.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-s7xJsHA2.css">
+</head>
+<body class="dark-theme">
+
+    <!-- Background Audio -->
+    <audio id="bg-audio" loop preload="none">
+        <source src="https://assets.mixkit.co/music/preview/mixkit-ethereal-choir-ascension-114.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Floating Audio Button -->
+    <button id="audio-toggle" class="floating-audio icon-btn tooltip" aria-label="Toggle Sound">
+        <svg viewBox="0 0 24 24" fill="none" class="audio-icon" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"></path><path class="sound-waves" d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+    </button>
+
+    <!-- Preloader Overlay -->
+    <div id="preloader-overlay">
+        <div class="shutter top-shutter"></div>
+        <div class="shutter bottom-shutter"></div>
+        <div class="preloader-logo">K<span class="dot">.</span></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="#" class="logo">K<span class="dot">.</span></a>
+        <ul class="nav-links">
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#gallery" class="nav-link">Gallery</a></li>
+            <li><a href="#pricing" class="nav-link">Pricing</a></li>
+        </ul>
+        <div class="nav-actions">
+            <!-- Language and Theme toggles -->
+            <button class="icon-btn theme-toggle" aria-label="Toggle Theme">
+                <svg viewBox="0 0 24 24" fill="none" class="sun-icon"><path d="M12 3V4M12 20V21M4 12H3M6.31412 6.31412L5.5 5.5M17.6859 6.31412L18.5 5.5M6.31412 17.69L5.5 18.5M17.6859 17.69L18.5 18.5M21 12H20M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <a href="#contact" class="btn-primary magnetic-btn"><span>Book Free Consultation &rarr;</span></a>
+        </div>
+        
+        <button class="mobile-menu-btn">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section id="hero" class="hero-section">
+            <div class="spline-wrapper">
+                <!-- Fallback background when loading or on low end devices -->
+                <div class="spline-fallback"></div>
+                <!-- Interactive 3D element: Abstract rotating gold ring/shapes -->
+                <spline-viewer url="https://prod.spline.design/6Wq1Q7YGyM-iab9i/scene.splinecode" loading-anim></spline-viewer>
+                <div class="hero-vignette"></div>
+            </div>
+
+            <div class="hero-content">
+                <div class="title-overflow"><h1 class="hero-title">Eternal Moments</h1></div>
+                <div class="title-overflow"><h1 class="hero-title italic">Captured</h1></div>
+                <p class="hero-desc">Cinematic Wedding Photography & Visual Storytelling in Chennai</p>
+                <a href="https://wa.me/910000000000" class="btn-whatsapp gold-glow magnetic-btn" target="_blank">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.487-1.761-1.663-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+                    <span>Connect on WhatsApp &rarr;</span>
+                </a>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="scroll-down">
+                <div class="mouse"></div>
+                <p>Scroll to explore</p>
+            </div>
+        </section>
+
+        <!-- AS FEATURED IN MARQUEE -->
+        <div class="press-marquee">
+            <div class="marquee-content" id="marquee-1">
+                <span>Featured In: Vogue Weddings</span><span class="dot-separator">&bull;</span>
+                <span>WedMeGood</span><span class="dot-separator">&bull;</span>
+                <span>Awwwards</span><span class="dot-separator">&bull;</span>
+                <span>South Indian Bride</span><span class="dot-separator">&bull;</span>
+                <span>Harper's Bazaar</span><span class="dot-separator">&bull;</span>
+                <span>Featured In: Vogue Weddings</span><span class="dot-separator">&bull;</span>
+                <span>WedMeGood</span><span class="dot-separator">&bull;</span>
+                <span>Awwwards</span><span class="dot-separator">&bull;</span>
+                <span>South Indian Bride</span><span class="dot-separator">&bull;</span>
+                <span>Harper's Bazaar</span>
+            </div>
+            <div class="marquee-content" id="marquee-2" aria-hidden="true">
+                <span>Featured In: Vogue Weddings</span><span class="dot-separator">&bull;</span>
+                <span>WedMeGood</span><span class="dot-separator">&bull;</span>
+                <span>Awwwards</span><span class="dot-separator">&bull;</span>
+                <span>South Indian Bride</span><span class="dot-separator">&bull;</span>
+                <span>Harper's Bazaar</span><span class="dot-separator">&bull;</span>
+                <span>Featured In: Vogue Weddings</span><span class="dot-separator">&bull;</span>
+                <span>WedMeGood</span><span class="dot-separator">&bull;</span>
+                <span>Awwwards</span><span class="dot-separator">&bull;</span>
+                <span>South Indian Bride</span><span class="dot-separator">&bull;</span>
+                <span>Harper's Bazaar</span>
+            </div>
+        </div>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-content">
+                        <span class="section-tag gold">Studio Journey</span>
+                        <h2 class="section-head">A Legacy of<br><span>Light & Shadow</span></h2>
+                        <p class="section-text">Welcome to K Photo Studio. For over a decade, we have been weaving the raw, candid emotions of Chennai's most luxurious weddings into timeless art. Our approach transcends photography. It's an immersive, cinematic experience.</p>
+                        
+                        <div class="timeline" id="timeline">
+                            <div class="timeline-item">
+                                <h3>2015</h3>
+                                <p>Studio Founded</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h3>2020</h3>
+                                <p>Awwwards Honoree</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h3>2026</h3>
+                                <p>500+ Luxury Sets</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-visuals 3d-container">
+                        <!-- 3D Carousel logic build around these items -->
+                        <div class="carousel-3d" id="about-carousel">
+                            <div class="carousel-ring">
+                                <div class="c-item" style="--i:1;">
+                                    <div class="img-wrap"><img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=800" alt="Wedding Ring"></div>
+                                </div>
+                                <div class="c-item" style="--i:2;">
+                                    <div class="img-wrap"><img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&q=80&w=800" alt="Couple Portrait"></div>
+                                </div>
+                                <div class="c-item" style="--i:3;">
+                                    <div class="img-wrap"><img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&q=80&w=800" alt="Candid Event"></div>
+                                </div>
+                                <div class="c-item" style="--i:4;">
+                                    <div class="img-wrap"><img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&q=80&w=800" alt="Pre-wedding shoot"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MEET THE DIRECTOR SECTION -->
+        <section id="director" class="section director-section">
+            <div class="container">
+                <div class="director-grid">
+                    <div class="director-img-wrap perspective-wrap">
+                        <div class="d-img-inner">
+                            <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&q=80&w=800" alt="Founder & Director">
+                            <div class="founder-badge gold-glow">Founder & Visionary</div>
+                        </div>
+                    </div>
+                    <div class="director-content">
+                        <span class="section-tag gold">The Mastermind</span>
+                        <h2 class="section-head">Crafting Visual <span>Legacies</span></h2>
+                        <p class="section-text">"A photograph isn't just a memory; it's a piece of art that freezes the deepest of human emotions. We don't just point and shoot. We direct, curate, and immortalize."</p>
+                        <p class="section-text">With over 12 years of experience capturing luxury Indian weddings globally, our vision blends raw storytelling with cinematic high-fashion aesthetics.</p>
+                        <div class="signature">Karthik R.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DETAILED 3D SERVICES SECTION (STICKY SCROLL) -->
+        <section id="services" class="section services-detailed-section">
+            <div class="container relative">
+                <div class="center-content m-b-large">
+                    <span class="section-tag gold">Expertise</span>
+                    <h2 class="section-head text-center">Our <span>Mastercraft</span></h2>
+                </div>
+
+                <div class="services-sticky-wrapper" id="services-sticky">
+                    <!-- Left: Sticky 3D Visuals -->
+                    <div class="s-visuals-sticky">
+                        <div class="s-visual-item active" id="sv-0" style="background-image: url('https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&q=80&w=1200');"></div>
+                        <div class="s-visual-item" id="sv-1" style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=1200');"></div>
+                        <div class="s-visual-item" id="sv-2" style="background-image: url('https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80&w=1200');"></div>
+                        <div class="s-visual-item" id="sv-3" style="background-image: url('https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&q=80&w=1200');"></div>
+                        <!-- Extra 3D Element overlay -->
+                        <div class="s-3d-overlay"></div>
+                    </div>
+                    
+                    <!-- Right: Scrolling Detailed Content -->
+                    <div class="s-content-scroll">
+                        <div class="s-content-block" data-index="0">
+                            <h3>01. Cinematic Films</h3>
+                            <p>We approach every wedding like a high-budget feature film. Utilizing ARRI cinema cameras, drone choreography, and Hollywood-grade color science, we craft visual masterpieces that tell your love story in breathtaking 4K resolution.</p>
+                            <ul class="s-features">
+                                <li>Director's Cut Highlight Reels</li>
+                                <li>Dolby Atmos Sound Design</li>
+                                <li>Same-Day Teaser Edits</li>
+                            </ul>
+                        </div>
+                        <div class="s-content-block" data-index="1">
+                            <h3>02. Editorial Portraits</h3>
+                            <p>Moving away from stiff poses, our editorial approach blends high-fashion aesthetics with raw, candid wedding emotions. Every frame is directed lightly to ensure you look like you belong on the cover of Vogue Magazine.</p>
+                            <ul class="s-features">
+                                <li>Magazine-Style Retouching</li>
+                                <li>Creative Lighting Setups</li>
+                                <li>Unobtrusive Documentation</li>
+                            </ul>
+                        </div>
+                        <div class="s-content-block" data-index="2">
+                            <h3>03. Spatial Aerials</h3>
+                            <p>The grandeur of luxury weddings requires a grand perspective. Our licensed drone cinematographers capture sweeping aerial views of your venues and baraat, adding unparalleled scale and cinematic drama to your films.</p>
+                            <ul class="s-features">
+                                <li>FPV Dynamic Tracking</li>
+                                <li>Venue Mapping & Establishers</li>
+                                <li>Dual Operator Setups</li>
+                            </ul>
+                        </div>
+                        <div class="s-content-block" data-index="3">
+                            <h3>04. Destination Shoots</h3>
+                            <p>From the cliffs of Santorini to the palaces of Udaipur, we travel globally to execute concept-driven pre-wedding shoots. We handle moodboarding, styling guides, and location scouting to deliver a surreal experience.</p>
+                            <ul class="s-features">
+                                <li>Concept & Storyboarding</li>
+                                <li>Styling & Wardrobe Consultation</li>
+                                <li>Global Logistics Handled</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3D ALBUM SHOWCASE SECTION -->
+        <section id="albums" class="section albums-3d-section">
+            <div class="container">
+                <div class="center-content m-b-large">
+                    <span class="section-tag gold">Heirlooms</span>
+                    <h2 class="section-head text-center">Fine-Art <span>Albums</span></h2>
+                    <p class="section-text text-center">Your legacy deserves to be touched. Genuine Italian leather, archival fine-art paper, and lay-flat binding, presented in a magical 3D experience.</p>
+                </div>
+                
+                <div class="album-showcase" id="album-showcase">
+                    <div class="book-container perspective-wrap">
+                        <div class="book" id="book-3d">
+                            <!-- Back cover -->
+                            <div class="b-page b-cover-back"></div>
+                            <!-- Pages inside -->
+                            <div class="b-page b-inside b-page-4"><img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&q=80&w=600" alt="Print"></div>
+                            <div class="b-page b-inside b-page-3"><img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=600" alt="Print"></div>
+                            <div class="b-page b-inside b-page-2"><img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&q=80&w=600" alt="Print"></div>
+                            <div class="b-page b-inside b-page-1"><img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&q=80&w=600" alt="Print"></div>
+                            <!-- Front cover -->
+                            <div class="b-page b-cover-front">
+                                <img src="https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?auto=format&fit=crop&q=80&w=600" alt="Album Cover">
+                                <div class="cover-text">
+                                    <h3 class="gold-text">K. STUDIO <br><span>Legacy Collection</span></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTERACTIVE BEFORE/AFTER SLIDER -->
+        <section id="color-grade" class="section color-grade-section">
+            <div class="container">
+                <div class="center-content m-b-large">
+                    <span class="section-tag gold">The Art of Editing</span>
+                    <h2 class="section-head text-center">Raw vs <span>Cinematic</span></h2>
+                    <p class="section-text text-center">Drag the slider to experience our signature color grading magic.</p>
+                </div>
+                
+                <div class="slider-wrapper">
+                    <div class="slider-container" id="ba-slider">
+                        <!-- Before (RAW) Image - Bottom layer -->
+                        <div class="img-layer layer-raw">
+                            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=1200" alt="RAW Image" class="raw-img">
+                            <span class="label-raw">Original</span>
+                        </div>
+                        <!-- After (Graded) Image - Top layer (clipped) -->
+                        <div class="img-layer layer-graded" id="layer-graded">
+                            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=1200" alt="Edited Image" class="graded-img">
+                            <span class="label-graded">Graded</span>
+                        </div>
+                        <!-- Custom Slider Handle -->
+                        <div class="slider-handle" id="slider-handle">
+                            <div class="handle-line"></div>
+                            <div class="handle-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3" stroke-width="2" stroke-linecap="round"/></svg></div>
+                        </div>
+                        <!-- Hidden native range input -->
+                        <input type="range" min="0" max="100" value="50" class="native-slider" id="native-slider">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERY SECTION (Infinite Masonry 3D Grid) -->
+        <section id="gallery" class="section gallery-section">
+            <div class="container">
+                <div class="gallery-header flex-between">
+                    <h2 class="section-head">Curated <span>Folio</span></h2>
+                    <div class="gallery-filters">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="weddings">Weddings</button>
+                        <button class="filter-btn" data-filter="candid">Candid</button>
+                    </div>
+                </div>
+                
+                <div class="gallery-grid" id="gallery-grid">
+                    <!-- Polaroid Planes -->
+                    <div class="g-item" data-cat="weddings">
+                        <div class="g-inner">
+                            <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80&w=800" alt="Wedding">
+                            <div class="g-overlay"><span>Mandap Details</span></div>
+                        </div>
+                    </div>
+                    <div class="g-item" data-cat="candid">
+                        <div class="g-inner">
+                            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=800" alt="Candid">
+                            <div class="g-overlay"><span>Reception Smiles</span></div>
+                        </div>
+                    </div>
+                    <div class="g-item" data-cat="weddings">
+                        <div class="g-inner">
+                            <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&q=80&w=800" alt="Rituals">
+                            <div class="g-overlay"><span>Holy Rituals</span></div>
+                        </div>
+                    </div>
+                    <div class="g-item" data-cat="weddings">
+                        <div class="g-inner">
+                            <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&q=80&w=800" alt="Decor">
+                            <div class="g-overlay"><span>Venue Setup</span></div>
+                        </div>
+                    </div>
+                    <div class="g-item" data-cat="candid">
+                        <div class="g-inner">
+                            <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&q=80&w=800" alt="Bridal">
+                            <div class="g-overlay"><span>Bridal Glow</span></div>
+                        </div>
+                    </div>
+                    <!-- Empty item for masonry stagger effect -->
+                </div>
+                <div class="center-content m-t">
+                    <button class="btn-outline">View Complete Archive</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS SECTION -->
+        <section id="testimonials" class="section testimonial-section">
+            <div class="test-fog-base"></div>
+            <div class="container">
+                <span class="section-tag gold">Words of Love</span>
+                <h2 class="section-head text-center">Client <span>Echoes</span></h2>
+                
+                <div class="test-bubbles-container">
+                    <div class="test-bubble b1">
+                        <p class="quote">"K Photo Studio didn't just take pictures; they immortalized our bond. The cinematic video still gives me goosebumps."</p>
+                        <h4 class="client-name">- Anjali & Vikram</h4>
+                    </div>
+                    <div class="test-bubble b2">
+                        <p class="quote">"Every detail, from the grand decor to a fleeting smile, was captured with pristine clarity. Absolute perfection."</p>
+                        <h4 class="client-name">- Sneha R.</h4>
+                    </div>
+                    <div class="test-bubble b3">
+                        <p class="quote">"The 3D gallery they provided us post-wedding blew our minds. They are true visionaries of modern photography."</p>
+                        <h4 class="client-name">- Rahul & Priya</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- THE K-STUDIO EXPERIENCE (JOURNEY) -->
+        <section id="experience" class="section experience-section">
+            <div class="container">
+                <div class="center-content m-b-large">
+                    <span class="section-tag gold">The Process</span>
+                    <h2 class="section-head text-center">Your <span>Journey</span></h2>
+                </div>
+                
+                <div class="journey-path" id="journey-path">
+                    <div class="j-line"></div>
+                    <div class="j-line-fill" id="j-line-fill"></div>
+                    
+                    <div class="j-step step-left">
+                        <div class="j-dot"></div>
+                        <div class="j-content glass-box">
+                            <h3>01. Consultation</h3>
+                            <p>Coffee and conversations. We understand your vision, style, and the story you want to tell.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="j-step step-right">
+                        <div class="j-dot"></div>
+                        <div class="j-content glass-box">
+                            <h3>02. Concept Mapping</h3>
+                            <p>Creating moodboards, planning the perfect moments, and aligning our cinematic vision with your events.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="j-step step-left">
+                        <div class="j-dot"></div>
+                        <div class="j-content glass-box">
+                            <h3>03. The Grand Shoot</h3>
+                            <p>Our mastercraft in action. Invisible yet omnipresent, capturing the finest details and rawest emotions.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="j-step step-right">
+                        <div class="j-dot"></div>
+                        <div class="j-content glass-box">
+                            <h3>04. Color & Cinematic Edit</h3>
+                            <p>Meticulous post-production where every frame is treated like a Hollywood movie scene.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="j-step step-left">
+                        <div class="j-dot"></div>
+                        <div class="j-content glass-box">
+                            <h3>05. The Premiere</h3>
+                            <p>Delivery of your custom luxury albums and an interactive 3D digital gallery. A legacy immortalized.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRICING SECTION -->
+        <section id="pricing" class="section pricing-section">
+            <div class="container">
+                <h2 class="section-head text-center">Curated <span>Experiences</span></h2>
+                
+                <div class="pricing-cards">
+                    <div class="p-card">
+                        <div class="p-bg"></div>
+                        <span class="p-badge">Silver Tier</span>
+                        <h3>Intimate</h3>
+                        <p class="p-price">INR 1.5L <span>/ event</span></p>
+                        <ul class="p-features">
+                            <li>2 Master Photographers</li>
+                            <li>1 Cinematographer</li>
+                            <li>Candid & Traditional Covers</li>
+                            <li>Premium Wedding Album</li>
+                        </ul>
+                        <button class="btn-primary w-100 p-btn">Select Tier &rarr;</button>
+                    </div>
+                    
+                    <div class="p-card featured">
+                        <div class="p-bg gold-glow-bg"></div>
+                        <span class="p-badge gold">Gold / Most Loved</span>
+                        <h3>Cinematic</h3>
+                        <p class="p-price">INR 3.0L <span>/ event</span></p>
+                        <ul class="p-features">
+                            <li>4 Master Photographers</li>
+                            <li>2 Drone Operators</li>
+                            <li>Next-Day Teaser Reel</li>
+                            <li>3D Digital Gallery</li>
+                            <li>2 Premium Leather Albums</li>
+                        </ul>
+                        <button class="btn-primary w-100 p-btn">Select Tier &rarr;</button>
+                    </div>
+
+                    <div class="p-card">
+                        <div class="p-bg"></div>
+                        <span class="p-badge">Platinum Tier</span>
+                        <h3>Immersive</h3>
+                        <p class="p-price">INR 5.0L <span>/ event</span></p>
+                        <ul class="p-features">
+                            <li>Unlimited Coverage Team</li>
+                            <li>Spatial 3D Video Coverage</li>
+                            <li>Pre-wedding Shoot Included</li>
+                            <li>Live Editing & Screenings</li>
+                            <li>VIP Album Bundle</li>
+                        </ul>
+                        <button class="btn-primary w-100 p-btn">Select Tier &rarr;</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIP FAQ SECTION -->
+        <section id="faq" class="section faq-section">
+            <div class="container">
+                <div class="center-content m-b-large">
+                    <span class="section-tag gold">Clarity</span>
+                    <h2 class="section-head text-center">Frequently <span>Asked</span></h2>
+                </div>
+                
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <button class="faq-btn">Do you travel for destination weddings? <span class="faq-icon">+</span></button>
+                        <div class="faq-content">
+                            <p>Absolutely. While we are based in Chennai, we frequently travel globally for luxury destination weddings. We handle all logistics internally to ensure a seamless experience.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-btn">How long does it take to deliver the final photos & videos? <span class="faq-icon">+</span></button>
+                        <div class="faq-content">
+                            <p>Perfection takes time. Our standard timeline for cinematic films and fully-edited galleries is 6 to 8 weeks, ensuring every frame is meticulously color-graded.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-btn">Do you provide Raw (unedited) footage? <span class="faq-icon">+</span></button>
+                        <div class="faq-content">
+                            <p>We provide all raw photo dumps upon request in the Platinum Tier. However, our true mastercraft shines in our final curated and cinematic-graded deliveries.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-btn">How early should we book you? <span class="faq-icon">+</span></button>
+                        <div class="faq-content">
+                            <p>We accept a very limited number of commissions each year (around 30 to 40) to maintain our VIP standard. We recommend booking 6 to 12 months in advance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-copy">
+                        <span class="section-tag gold">Consultation Desk</span>
+                        <h2 class="section-head">Make Your<br><span>First Move</span></h2>
+                        <p class="section-text contact-text">This area has been reworked so the text reads clearly, the cards stand apart from the black background, and the contact details feel premium instead of blending into the page.</p>
+
+                        <div class="contact-cards">
+                            <article class="contact-card card-mail">
+                                <div class="contact-card-icon">01</div>
+                                <p class="contact-card-label">Electronic Mail</p>
+                                <h3 class="contact-card-value">booking@kphotostudio.in</h3>
+                                <p class="contact-card-note">For proposals, bookings, and package requests.</p>
+                            </article>
+
+                            <article class="contact-card card-phone">
+                                <div class="contact-card-icon">02</div>
+                                <p class="contact-card-label">Direct Line</p>
+                                <h3 class="contact-card-value">+91 98765 43210</h3>
+                                <p class="contact-card-note">Quickest way to confirm dates and availability.</p>
+                            </article>
+
+                            <article class="contact-card card-studio">
+                                <div class="contact-card-icon">03</div>
+                                <p class="contact-card-label">Studio Base</p>
+                                <h3 class="contact-card-value">Boat Club Road, Chennai</h3>
+                                <p class="contact-card-note">Private consultations by prior appointment only.</p>
+                            </article>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-wrapper">
+                        <div class="contact-form-header">
+                            <span class="contact-form-tag">Booking Form</span>
+                            <h3>Reserve the Date</h3>
+                            <p>Each field now uses stronger contrast and cleaner spacing so the form stays readable on a dark layout.</p>
+                        </div>
+
+                        <form id="booking-form" class="c-form">
+                            <div class="input-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" placeholder="E.g., Ananya & Rahul" required>
+                                <span class="input-line"></span>
+                            </div>
+                            <div class="input-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" placeholder="hello@example.com" required>
+                                <span class="input-line"></span>
+                            </div>
+                            <div class="input-group">
+                                <label for="date">Tentative Date</label>
+                                <input type="text" id="date" inputmode="numeric" placeholder="DD-MM-YYYY" required>
+                                <span class="input-line"></span>
+                            </div>
+                            <div class="input-group">
+                                <label for="message">Your Story</label>
+                                <textarea id="message" rows="4" placeholder="Tell us about your wedding vision..."></textarea>
+                                <span class="input-line"></span>
+                            </div>
+                            <button type="submit" class="btn-primary magnetic-btn submit-btn">
+                                <span>Reserve the Date</span>
+                            </button>
+                            <p class="razorpay-notice">Secure payment via Razorpay will be initiated upon confirmation.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="f-logo">K.</div>
+                    <p class="footer-copy">Luxury wedding photography and cinematic storytelling from Chennai.</p>
+                </div>
+                <div class="f-links">
+                    <a href="#">Instagram</a>
+                    <a href="#">Behance</a>
+                    <a href="#">Facebook</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 K Photo Studio. All Rights Reserved.</p>
+                <div class="f-legal">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <button class="scroll-top" id="scroll-top">Back to top</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
+  
