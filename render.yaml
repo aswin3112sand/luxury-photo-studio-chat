@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: k-photo-studio-static
+    runtime: static
+    rootDir: k-photo-studio
+    buildCommand: echo "No build step required"
+    staticPublishPath: .

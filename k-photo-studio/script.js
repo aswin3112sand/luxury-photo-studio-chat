@@ -406,18 +406,52 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // --- 8. CONTACT FORM ---
     const form = document.getElementById('booking-form');
+    const whatsappCta = document.querySelector('.btn-whatsapp[href*="wa.me/"]');
+    const whatsappHref = whatsappCta ? whatsappCta.getAttribute('href') : '';
+    const whatsappMatch = whatsappHref ? whatsappHref.match(/wa\.me\/(\d+)/) : null;
+    const whatsappNumber = whatsappMatch ? whatsappMatch[1] : '';
+
     if (form) {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             const btn = form.querySelector('.submit-btn span');
+            if (!btn) {
+                return;
+            }
+
             const originalText = btn.innerText;
-            btn.innerText = "Processing...";
-            
+            const name = form.querySelector('#name')?.value.trim() || '';
+            const email = form.querySelector('#email')?.value.trim() || '';
+            const date = form.querySelector('#date')?.value.trim() || '';
+            const story = form.querySelector('#message')?.value.trim() || 'Not provided';
+
+            if (!whatsappNumber) {
+                btn.innerText = "Update WhatsApp Link";
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                }, 2500);
+                return;
+            }
+
+            const enquiryMessage = [
+                'Hello K Photo Studio, I would like to book a consultation.',
+                '',
+                `Name: ${name}`,
+                `Email: ${email}`,
+                `Tentative Date: ${date}`,
+                `Story: ${story}`
+            ].join('\n');
+
+            btn.innerText = "Opening WhatsApp...";
+            window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(enquiryMessage)}`, '_blank', 'noopener');
+            form.reset();
+
             setTimeout(() => {
-                btn.innerText = "Request Received!";
-                form.reset();
-                setTimeout(() => { btn.innerText = originalText; }, 3000);
-            }, 1500);
+                btn.innerText = "WhatsApp Opened";
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                }, 2500);
+            }, 400);
         });
     }
 
