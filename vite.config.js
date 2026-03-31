@@ -3,5 +3,8 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   root: 'k-photo-studio',
-  plugins: [react()]
+  plugins: [react()],
+  build: {
+    outDir: 'dist'
+  }
 })
