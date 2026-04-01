@@ -31,9 +31,6 @@
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
 
-    <!-- Spline 3D Viewer -->
-    <script type="module" src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"></script>
-
     <!-- GSAP / Lenis Smooth Scroll -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
@@ -79,19 +76,48 @@
             <a href="#contact" class="btn-primary magnetic-btn"><span>Book Free Consultation &rarr;</span></a>
         </div>
         
-        <button class="mobile-menu-btn">
+        <button
+            class="mobile-menu-btn"
+            id="mobile-menu-btn"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-nav"
+            aria-label="Toggle navigation"
+        >
             <span></span><span></span><span></span>
         </button>
+
+        <div class="mobile-nav-panel" id="mobile-nav" aria-hidden="true">
+            <a href="#about" class="mobile-nav-link">About</a>
+            <a href="#services" class="mobile-nav-link">Services</a>
+            <a href="#gallery" class="mobile-nav-link">Gallery</a>
+            <a href="#pricing" class="mobile-nav-link">Pricing</a>
+            <a href="#contact" class="btn-primary mobile-nav-cta"><span>Book Free Consultation</span></a>
+        </div>
     </nav>
 
     <main>
         <!-- HERO SECTION -->
         <section id="hero" class="hero-section">
-            <div class="spline-wrapper">
+            <div
+                class="spline-wrapper"
+                data-spline-url="https://prod.spline.design/6Wq1Q7YGyM-iab9i/scene.splinecode"
+            >
+                <video
+                    class="hero-video"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                    poster="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=1200"
+                    aria-hidden="true"
+                >
+                    <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+                </video>
                 <!-- Fallback background when loading or on low end devices -->
                 <div class="spline-fallback"></div>
-                <!-- Interactive 3D element: Abstract rotating gold ring/shapes -->
-                <spline-viewer url="https://prod.spline.design/6Wq1Q7YGyM-iab9i/scene.splinecode" loading-anim></spline-viewer>
+                <div class="spline-stage" id="hero-spline-stage" aria-hidden="true"></div>
                 <div class="hero-vignette"></div>
             </div>
 
@@ -99,7 +125,7 @@
                 <div class="title-overflow"><h1 class="hero-title">Eternal Moments</h1></div>
                 <div class="title-overflow"><h1 class="hero-title italic">Captured</h1></div>
                 <p class="hero-desc">Cinematic Wedding Photography & Visual Storytelling in Chennai</p>
-                <a href="https://wa.me/910000000000" class="btn-whatsapp gold-glow magnetic-btn" target="_blank">
+                <a href="https://wa.me/910000000000" class="btn-whatsapp gold-glow magnetic-btn" target="_blank" rel="noreferrer">
                     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.487-1.761-1.663-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
                     <span>Connect on WhatsApp &rarr;</span>
                 </a>
@@ -167,19 +193,19 @@
                     
                     <div class="about-visuals 3d-container">
                         <!-- 3D Carousel logic build around these items -->
-                        <div class="carousel-3d" id="about-carousel">
+                        <div class="carousel-3d tilt-surface" id="about-carousel">
                             <div class="carousel-ring">
                                 <div class="c-item" style="--i:1;">
-                                    <div class="img-wrap"><img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=800" alt="Wedding Ring"></div>
+                                    <div class="img-wrap"><img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=800" alt="Wedding Ring" loading="lazy" decoding="async"></div>
                                 </div>
                                 <div class="c-item" style="--i:2;">
-                                    <div class="img-wrap"><img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&q=80&w=800" alt="Couple Portrait"></div>
+                                    <div class="img-wrap"><img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&q=80&w=800" alt="Couple Portrait" loading="lazy" decoding="async"></div>
                                 </div>
                                 <div class="c-item" style="--i:3;">
-                                    <div class="img-wrap"><img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&q=80&w=800" alt="Candid Event"></div>
+                                    <div class="img-wrap"><img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&q=80&w=800" alt="Candid Event" loading="lazy" decoding="async"></div>
                                 </div>
                                 <div class="c-item" style="--i:4;">
-                                    <div class="img-wrap"><img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&q=80&w=800" alt="Pre-wedding shoot"></div>
+                                    <div class="img-wrap"><img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&q=80&w=800" alt="Pre-wedding shoot" loading="lazy" decoding="async"></div>
                                 </div>
                             </div>
                         </div>
@@ -193,8 +219,8 @@
             <div class="container">
                 <div class="director-grid">
                     <div class="director-img-wrap perspective-wrap">
-                        <div class="d-img-inner">
-                            <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&q=80&w=800" alt="Founder & Director">
+                        <div class="d-img-inner tilt-surface">
+                            <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&q=80&w=800" alt="Founder & Director" loading="lazy" decoding="async">
                             <div class="founder-badge gold-glow">Founder & Visionary</div>
                         </div>
                     </div>
@@ -282,17 +308,17 @@
                 
                 <div class="album-showcase" id="album-showcase">
                     <div class="book-container perspective-wrap">
-                        <div class="book" id="book-3d">
+                        <div class="book tilt-surface" id="book-3d">
                             <!-- Back cover -->
                             <div class="b-page b-cover-back"></div>
                             <!-- Pages inside -->
-                            <div class="b-page b-inside b-page-4"><img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&q=80&w=600" alt="Print"></div>
-                            <div class="b-page b-inside b-page-3"><img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=600" alt="Print"></div>
-                            <div class="b-page b-inside b-page-2"><img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&q=80&w=600" alt="Print"></div>
-                            <div class="b-page b-inside b-page-1"><img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&q=80&w=600" alt="Print"></div>
+                            <div class="b-page b-inside b-page-4"><img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&q=80&w=600" alt="Print" loading="lazy" decoding="async"></div>
+                            <div class="b-page b-inside b-page-3"><img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=600" alt="Print" loading="lazy" decoding="async"></div>
+                            <div class="b-page b-inside b-page-2"><img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&q=80&w=600" alt="Print" loading="lazy" decoding="async"></div>
+                            <div class="b-page b-inside b-page-1"><img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&q=80&w=600" alt="Print" loading="lazy" decoding="async"></div>
                             <!-- Front cover -->
                             <div class="b-page b-cover-front">
-                                <img src="https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?auto=format&fit=crop&q=80&w=600" alt="Album Cover">
+                                <img src="https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?auto=format&fit=crop&q=80&w=600" alt="Album Cover" loading="lazy" decoding="async">
                                 <div class="cover-text">
                                     <h3 class="gold-text">K. STUDIO <br><span>Legacy Collection</span></h3>
                                 </div>
@@ -312,16 +338,16 @@
                     <p class="section-text text-center">Drag the slider to experience our signature color grading magic.</p>
                 </div>
                 
-                <div class="slider-wrapper">
+                <div class="slider-wrapper tilt-surface">
                     <div class="slider-container" id="ba-slider">
                         <!-- Before (RAW) Image - Bottom layer -->
                         <div class="img-layer layer-raw">
-                            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=1200" alt="RAW Image" class="raw-img">
+                            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=1200" alt="RAW Image" class="raw-img" loading="lazy" decoding="async">
                             <span class="label-raw">Original</span>
                         </div>
                         <!-- After (Graded) Image - Top layer (clipped) -->
                         <div class="img-layer layer-graded" id="layer-graded">
-                            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=1200" alt="Edited Image" class="graded-img">
+                            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=1200" alt="Edited Image" class="graded-img" loading="lazy" decoding="async">
                             <span class="label-graded">Graded</span>
                         </div>
                         <!-- Custom Slider Handle -->
@@ -352,31 +378,31 @@
                     <!-- Polaroid Planes -->
                     <div class="g-item" data-cat="weddings">
                         <div class="g-inner">
-                            <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80&w=800" alt="Wedding">
+                            <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80&w=800" alt="Wedding" loading="lazy" decoding="async">
                             <div class="g-overlay"><span>Mandap Details</span></div>
                         </div>
                     </div>
                     <div class="g-item" data-cat="candid">
                         <div class="g-inner">
-                            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=800" alt="Candid">
+                            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=800" alt="Candid" loading="lazy" decoding="async">
                             <div class="g-overlay"><span>Reception Smiles</span></div>
                         </div>
                     </div>
                     <div class="g-item" data-cat="weddings">
                         <div class="g-inner">
-                            <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&q=80&w=800" alt="Rituals">
+                            <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?auto=format&fit=crop&q=80&w=800" alt="Rituals" loading="lazy" decoding="async">
                             <div class="g-overlay"><span>Holy Rituals</span></div>
                         </div>
                     </div>
                     <div class="g-item" data-cat="weddings">
                         <div class="g-inner">
-                            <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&q=80&w=800" alt="Decor">
+                            <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&q=80&w=800" alt="Decor" loading="lazy" decoding="async">
                             <div class="g-overlay"><span>Venue Setup</span></div>
                         </div>
                     </div>
                     <div class="g-item" data-cat="candid">
                         <div class="g-inner">
-                            <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&q=80&w=800" alt="Bridal">
+                            <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&q=80&w=800" alt="Bridal" loading="lazy" decoding="async">
                             <div class="g-overlay"><span>Bridal Glow</span></div>
                         </div>
                     </div>
